@@ -479,91 +479,6 @@
                 gap: 0.5rem;
             }
         }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            animation: fadeIn 0.3s ease-out;
-        }
-
-        .modal-content {
-            background: white;
-            margin: 5% auto;
-            padding: 3rem;
-            border-radius: 16px;
-            max-width: 500px;
-            position: relative;
-            animation: slideIn 0.3s ease-out;
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .close {
-            position: absolute;
-            right: 1.5rem;
-            top: 1.5rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #999;
-        }
-
-        .close:hover {
-            color: var(--dark);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid #e5e5e5;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: 'DM Sans', sans-serif;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .modal h2 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .modal p {
-            margin-bottom: 2rem;
-            color: #666;
-        }
     </style>
 </head>
 <body>
@@ -723,7 +638,7 @@
 
                 <a href="https://vacuumist3.gumroad.com/l/gjuraa" class="btn btn-primary" target="_blank">Get Digital Thinking Now →</a>
                 
-                <button class="btn btn-secondary" onclick="openModal()">Or Try a FREE Sample First</button>
+                <a href="https://forms.gle/FtaTrUzPZYFN7Ww57" target="_blank" class="btn btn-secondary" style="text-decoration: none;">Or Try a FREE Sample First</a>
 
                 <div class="guarantee">
                     <strong>💯 30-Day Money-Back Guarantee</strong><br>
@@ -741,47 +656,7 @@
         </div>
     </footer>
 
-   
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        function openModal() {
-            document.getElementById('sampleModal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('sampleModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('sampleModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-
-        function handleSubmit(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            
-            // Here you would normally send this to your email service
-            // For now, we'll just redirect to a thank you page or show a success message
-            
-            alert(`Thank you, ${name}! Check your email (${email}) for your FREE sample chapter. If you don't see it, check your spam folder.`);
-            
-            closeModal();
-            
-            // You can integrate with services like:
-            // - Mailchimp
-            // - ConvertKit
-            // - EmailOctopus
-            // Or use a simple form service like Formspree
-        }
-
+    <script>
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -830,17 +705,6 @@
                 // fbq('track', 'AddToCart');
             });
         });
-
-        // Exit intent popup (shows modal when user tries to leave)
-        let exitIntentShown = false;
-        document.addEventListener('mouseleave', function(e) {
-            if (e.clientY < 0 && !exitIntentShown && window.scrollY > 500) {
-                exitIntentShown = true;
-                openModal();
-            }
-        });
     </script>
 </body>
-
 </html>
-
