@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17913557800"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17913557800');
+      
+      // FIRE PURCHASE CONVERSION IMMEDIATELY
+      // IMPORTANT: Replace PURCHASE_CONVERSION_LABEL with your actual label from Google Ads
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17913557800/PURCHASE_CONVERSION_LABEL',
+          'value': 14.99,
+          'currency': 'USD',
+          'transaction_id': ''
+      });
+      
+      console.log('Purchase conversion fired!');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Purchase! - Digital Thinking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #2D5F8D 0%, #1e4463 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .thank-you-container {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .thank-you-box {
+            background: white;
+            color: #2C3E50;
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .checkmark-circle {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #27ae60, #229954);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            animation: scaleIn 0.5s ease-out 0.3s both;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .checkmark {
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', serif;
+            color: #2D5F8D;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .success-message {
+            font-size: 1.2rem;
+            color: #2C3E50;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #FFF9F0;
+            border-left: 4px solid #E8752E;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            color: #2D5F8D;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box ul {
+            margin-left: 1.5rem;
+            color: #555;
+        }
+
+        .info-box li {
+            margin: 0.5rem 0;
+        }
+
+        .next-steps {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .next-steps h3 {
+            color: #2D5F8D;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .step-number {
+            background: #E8752E;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            color: #2C3E50;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #E8752E 0%, #d66621 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 1rem 0.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(232, 117, 46, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(232, 117, 46, 0.5);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2D5F8D;
+            border: 2px solid #2D5F8D;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: #2D5F8D;
+            color: white;
+        }
+
+        .support-note {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e5e5;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .support-note a {
+            color: #E8752E;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .thank-you-box {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .success-message {
+                font-size: 1.1rem;
+            }
+
+            .btn {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-box">
+            <div class="checkmark-circle">
+                <span class="checkmark">✓</span>
+            </div>
+            
+            <h1>Thank You for Your Purchase!</h1>
+            
+            <p class="success-message">
+                Your order has been confirmed and you should receive your download link via email within the next few minutes.
+            </p>
+
+            <div class="info-box">
+                <h3>📧 Check Your Email</h3>
+                <p>Gumroad has sent your download link to the email address you provided.</p>
+                <p><strong>Didn't receive it?</strong> Check your spam/junk folder or contact us at 
+                   <a href="mailto:vacuumlearners@gmail.com" style="color: #E8752E;">vacuumlearners@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="next-steps">
+                <h3>🚀 Getting Started with Digital Thinking</h3>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Download the PDF</strong> from the link in your email
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Review the curriculum structure</strong> - 8 comprehensive topics designed for ages 9-12
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>Start with Topic 1: Understanding Intelligence</strong> - it sets the foundation for everything else
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <strong>Use the hands-on activities</strong> - they make complex AI concepts fun and easy to grasp
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin: 2rem 0;">
+                <a href="mailto:vacuumlearners@gmail.com?subject=Question about Digital Thinking" class="btn btn-secondary">
+                    Have Questions? Email Us
+                </a>
+            </div>
+
+            <div class="support-note">
+                <p>
+                    <strong>Need help or have feedback?</strong><br>
+                    We're here to support you! Email us at 
+                    <a href="mailto:vacuumlearners@gmail.com">vacuumlearners@gmail.com</a>
+                </p>
+                <p style="margin-top: 1rem;">
+                    <strong>Enjoying Digital Thinking?</strong><br>
+                    We'd love to hear about your experience! Your feedback helps us improve.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Log conversion firing for debugging
+        console.log('Thank you page loaded - conversion should have fired');
+        
+        // Optional: Auto-redirect to homepage after 30 seconds
+        // Uncomment the line below if you want this behavior
+        // setTimeout(() => { window.location.href = '/'; }, 30000);
+    </script>
+</body>
+</html>
