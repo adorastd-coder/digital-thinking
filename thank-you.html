@@ -9,21 +9,17 @@
       gtag('js', new Date());
       gtag('config', 'AW-17913557800');
       
-      // FIRE PURCHASE CONVERSION IMMEDIATELY
-      // IMPORTANT: Replace PURCHASE_CONVERSION_LABEL with your actual label from Google Ads
+      // FIRE FORM SUBMISSION CONVERSION IMMEDIATELY
       gtag('event', 'conversion', {
-          'send_to': 'AW-17913557800/PURCHASE_CONVERSION_LABEL',
-          'value': 14.99,
-          'currency': 'USD',
-          'transaction_id': ''
+          'send_to': 'AW-17913557800/rz37CKy26_QbEgjm7N1C'
       });
       
-      console.log('Purchase conversion fired!');
+      console.log('Form submission conversion fired!');
     </script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You for Your Purchase! - Digital Thinking</title>
+    <title>Thank You! - Digital Thinking</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -134,15 +130,6 @@
             color: #555;
             line-height: 1.6;
             margin-bottom: 0.5rem;
-        }
-
-        .info-box ul {
-            margin-left: 1.5rem;
-            color: #555;
-        }
-
-        .info-box li {
-            margin: 0.5rem 0;
         }
 
         .next-steps {
@@ -258,67 +245,60 @@
                 <span class="checkmark">✓</span>
             </div>
             
-            <h1>Thank You for Your Purchase!</h1>
+            <h1>Thank You!</h1>
             
             <p class="success-message">
-                Your order has been confirmed and you should receive your download link via email within the next few minutes.
+                Your free Digital Thinking sample is on its way to your inbox!
             </p>
 
             <div class="info-box">
                 <h3>📧 Check Your Email</h3>
-                <p>Gumroad has sent your download link to the email address you provided.</p>
-                <p><strong>Didn't receive it?</strong> Check your spam/junk folder or contact us at 
-                   <a href="mailto:vacuumlearners@gmail.com" style="color: #E8752E;">vacuumlearners@gmail.com</a>
-                </p>
+                <p>We've sent your free PDF sample to the email address you provided.</p>
+                <p><strong>It should arrive within the next 2-5 minutes.</strong></p>
+                <p style="margin-top: 1rem;"><strong>Didn't receive it?</strong></p>
+                <ul>
+                    <li>Check your spam/junk folder</li>
+                    <li>Make sure you entered your email correctly</li>
+                    <li>Contact us at <a href="mailto:vacuumlearners@gmail.com" style="color: #E8752E;">vacuumlearners@gmail.com</a></li>
+                </ul>
             </div>
 
             <div class="next-steps">
-                <h3>🚀 Getting Started with Digital Thinking</h3>
+                <h3>🚀 What's Next?</h3>
                 
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <strong>Download the PDF</strong> from the link in your email
+                        <strong>Check your email</strong> for the free sample PDF
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <strong>Review the curriculum structure</strong> - 8 comprehensive topics designed for ages 9-12
+                        <strong>Review the sample</strong> - see if it's right for your child
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <strong>Start with Topic 1: Understanding Intelligence</strong> - it sets the foundation for everything else
-                    </div>
-                </div>
-                
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <strong>Use the hands-on activities</strong> - they make complex AI concepts fun and easy to grasp
+                        <strong>Love it? Get the full curriculum!</strong> The complete guide covers 8 topics with hands-on activities
                     </div>
                 </div>
             </div>
 
             <div style="margin: 2rem 0;">
-                <a href="mailto:vacuumlearners@gmail.com?subject=Question about Digital Thinking" class="btn btn-secondary">
-                    Have Questions? Email Us
+                <a href="https://adorastd-coder.github.io/digital-thinking/" class="btn">
+                    ← Back to Homepage
                 </a>
             </div>
 
             <div class="support-note">
                 <p>
-                    <strong>Need help or have feedback?</strong><br>
-                    We're here to support you! Email us at 
+                    <strong>Have questions?</strong><br>
+                    We're here to help! Email us at 
                     <a href="mailto:vacuumlearners@gmail.com">vacuumlearners@gmail.com</a>
-                </p>
-                <p style="margin-top: 1rem;">
-                    <strong>Enjoying Digital Thinking?</strong><br>
-                    We'd love to hear about your experience! Your feedback helps us improve.
                 </p>
             </div>
         </div>
@@ -326,11 +306,10 @@
 
     <script>
         // Log conversion firing for debugging
-        console.log('Thank you page loaded - conversion should have fired');
+        console.log('Form submission thank you page loaded - conversion fired');
         
-        // Optional: Auto-redirect to homepage after 30 seconds
-        // Uncomment the line below if you want this behavior
-        // setTimeout(() => { window.location.href = '/'; }, 30000);
+        // Optional: Auto-redirect to homepage after 15 seconds
+        // setTimeout(() => { window.location.href = 'https://adorastd-coder.github.io/digital-thinking/'; }, 15000);
     </script>
 </body>
 </html>
