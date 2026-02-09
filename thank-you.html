@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17913557800"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17913557800');
+      
+      // FIRE PURCHASE CONVERSION IMMEDIATELY
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17913557800/PURCHASE_CONVERSION_ID', // Replace with your purchase conversion ID
+          'value': 1.0, // Replace with actual product price
+          'currency': 'USD',
+          'transaction_id': '' // Will be populated from URL params
+      });
+      
+      console.log('Purchase conversion fired!');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You! - Digital Thinking</title>
+    <title>Thank You for Your Purchase! - Digital Thinking</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -96,9 +114,101 @@
             line-height: 1.6;
         }
 
+        .order-box {
+            background: #f8f9fa;
+            border: 2px solid #27ae60;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .order-box h3 {
+            color: #2D5F8D;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .order-details {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .order-details p {
+            color: #555;
+            margin: 0.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .order-details p:last-child {
+            border-bottom: none;
+        }
+
+        .order-details strong {
+            color: #2C3E50;
+        }
+
+        .download-section {
+            background: linear-gradient(135deg, #FFF9F0 0%, #FFF3E6 100%);
+            border-left: 4px solid #E8752E;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+        }
+
+        .download-section h3 {
+            color: #2D5F8D;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .download-section p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            border-radius: 50px;
+            margin: 0.5rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.5);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #E8752E 0%, #d66621 100%);
+            box-shadow: 0 4px 15px rgba(232, 117, 46, 0.4);
+        }
+
+        .btn-secondary:hover {
+            box-shadow: 0 6px 20px rgba(232, 117, 46, 0.5);
+        }
+
         .info-box {
             background: #FFF9F0;
-            border-left: 4px solid #E8752E;
+            border-left: 4px solid #3498db;
             padding: 1.5rem;
             margin: 2rem 0;
             border-radius: 8px;
@@ -111,10 +221,14 @@
             margin-bottom: 0.8rem;
         }
 
-        .info-box p {
+        .info-box ul {
+            margin-left: 1.5rem;
             color: #555;
-            line-height: 1.6;
-            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .info-box li {
+            margin: 0.5rem 0;
         }
 
         .next-steps {
@@ -158,37 +272,6 @@
             color: #2C3E50;
         }
 
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #E8752E 0%, #d66621 100%);
-            color: white;
-            padding: 1rem 2.5rem;
-            text-decoration: none;
-            border-radius: 50px;
-            margin: 1rem 0.5rem;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(232, 117, 46, 0.4);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(232, 117, 46, 0.5);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #2D5F8D;
-            border: 2px solid #2D5F8D;
-            box-shadow: none;
-        }
-
-        .btn-secondary:hover {
-            background: #2D5F8D;
-            color: white;
-        }
-
         .support-note {
             margin-top: 2rem;
             padding-top: 2rem;
@@ -201,6 +284,16 @@
             color: #E8752E;
             text-decoration: none;
             font-weight: 600;
+        }
+
+        .alert {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            text-align: left;
         }
 
         @media (max-width: 600px) {
@@ -219,6 +312,12 @@
             .btn {
                 display: block;
                 margin: 0.5rem 0;
+                padding: 1rem 2rem;
+            }
+
+            .order-details p {
+                flex-direction: column;
+                gap: 0.3rem;
             }
         }
     </style>
@@ -230,71 +329,164 @@
                 <span class="checkmark">✓</span>
             </div>
             
-            <h1>Thank You!</h1>
+            <h1>Thank You for Your Purchase!</h1>
             
             <p class="success-message">
-                Your free Digital Thinking sample is on its way to your inbox!
+                Your order has been confirmed. Welcome to Digital Thinking!
             </p>
 
-            <div class="info-box">
-                <h3>📧 Check Your Email</h3>
-                <p>We've sent your free PDF sample to the email address you provided.</p>
-                <p><strong>It should arrive within the next 2-5 minutes.</strong></p>
-                <p style="margin-top: 1rem;"><strong>Didn't receive it?</strong></p>
-                <ul>
-                    <li>Check your spam/junk folder</li>
-                    <li>Make sure you entered your email correctly</li>
-                    <li>Contact us at <a href="mailto:vacuumlearners@gmail.com" style="color: #E8752E;">vacuumlearners@gmail.com</a></li>
-                </ul>
+            <!-- Order Confirmation -->
+            <div class="order-box">
+                <h3>✅ Order Confirmation</h3>
+                <div class="order-details">
+                    <p>
+                        <span>Product:</span>
+                        <strong>Digital Thinking Curriculum</strong>
+                    </p>
+                    <p>
+                        <span>Order Number:</span>
+                        <strong id="order-number">Loading...</strong>
+                    </p>
+                    <p>
+                        <span>Order Date:</span>
+                        <strong id="order-date">Loading...</strong>
+                    </p>
+                    <p>
+                        <span>Email:</span>
+                        <strong id="customer-email">Loading...</strong>
+                    </p>
+                </div>
             </div>
 
+            <!-- Download Section -->
+            <div class="download-section">
+                <h3>📥 Download Your Digital Thinking Curriculum</h3>
+                <p>
+                    Your complete Digital Thinking curriculum is ready! Click the button below to download your PDF guide with all 8 topics and hands-on activities.
+                </p>
+                
+                <a href="#" id="download-btn" class="btn" download>
+                    ⬇️ Download Now (PDF)
+                </a>
+
+                <div class="alert" style="margin-top: 1.5rem;">
+                    <strong>📧 Email Backup:</strong> We've also sent a download link to your email address. Check your inbox (and spam folder) if you need to download again later.
+                </div>
+            </div>
+
+            <!-- What's Next -->
             <div class="next-steps">
-                <h3>🚀 What's Next?</h3>
+                <h3>🚀 Getting Started with Digital Thinking</h3>
                 
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <strong>Check your email</strong> for the free sample PDF
+                        <strong>Download & Save</strong> - Click the download button above and save the PDF to a safe location
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <strong>Review the sample</strong> - see if it's right for your child
+                        <strong>Review the Curriculum</strong> - Explore all 8 topics and choose where to start based on your child's interests
                     </div>
                 </div>
                 
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <strong>Love it? Get the full curriculum!</strong> The complete guide covers 8 topics with hands-on activities
+                        <strong>Start Learning!</strong> - Begin with hands-on activities and watch your child develop critical digital thinking skills
                     </div>
                 </div>
             </div>
 
+            <!-- Access Later Info -->
+            <div class="info-box">
+                <h3>💡 Need to Download Again?</h3>
+                <ul>
+                    <li>Check the email we sent you - it contains a permanent download link</li>
+                    <li>You can also access your purchase anytime through your Gumroad Library</li>
+                    <li>Lost your download link? Contact us at <a href="mailto:vacuumlearners@gmail.com" style="color: #E8752E;">vacuumlearners@gmail.com</a></li>
+                </ul>
+            </div>
+
             <div style="margin: 2rem 0;">
-                <a href="https://adorastd-coder.github.io/digital-thinking/" class="btn">
+                <a href="https://adorastd-coder.github.io/digital-thinking/" class="btn btn-secondary">
                     ← Back to Homepage
                 </a>
             </div>
 
+            <!-- Support Section -->
             <div class="support-note">
                 <p>
-                    <strong>Have questions?</strong><br>
-                    We're here to help! Email us at 
+                    <strong>Questions or Need Help?</strong><br>
+                    We're here to support you! Email us at 
                     <a href="mailto:vacuumlearners@gmail.com">vacuumlearners@gmail.com</a>
+                </p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    Thank you for investing in your child's digital literacy education! 🎓
                 </p>
             </div>
         </div>
     </div>
 
     <script>
-        // Log conversion firing for debugging
-        console.log('Form submission thank you page loaded - conversion fired');
-        
-        // Optional: Auto-redirect to homepage after 15 seconds
-        // setTimeout(() => { window.location.href = 'https://adorastd-coder.github.io/digital-thinking/'; }, 15000);
+        // Extract URL parameters from Gumroad
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Populate order details from URL parameters
+        window.addEventListener('DOMContentLoaded', function() {
+            // Get parameters from Gumroad redirect
+            const saleId = getUrlParameter('sale_id') || 'N/A';
+            const email = getUrlParameter('email') || getUrlParameter('purchaser_email') || 'Check your email';
+            const productPermalink = getUrlParameter('product_permalink') || '';
+            
+            // Set order number
+            document.getElementById('order-number').textContent = saleId;
+            
+            // Set current date
+            const today = new Date();
+            const formattedDate = today.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+            document.getElementById('order-date').textContent = formattedDate;
+            
+            // Set customer email
+            document.getElementById('customer-email').textContent = email;
+
+            // Set download link - Gumroad provides download URL
+            const downloadUrl = getUrlParameter('download_url') || getUrlParameter('product_permalink');
+            const downloadBtn = document.getElementById('download-btn');
+            
+            if (downloadUrl) {
+                downloadBtn.href = downloadUrl;
+            } else {
+                // Fallback: construct Gumroad library URL
+                downloadBtn.href = 'https://app.gumroad.com/library';
+                downloadBtn.textContent = '📚 Access Your Gumroad Library';
+            }
+
+            // Track purchase conversion with order details
+            if (typeof gtag !== 'undefined' && saleId !== 'N/A') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-17913557800/PURCHASE_CONVERSION_ID',
+                    'value': 1.0, // Update with actual price
+                    'currency': 'USD',
+                    'transaction_id': saleId
+                });
+            }
+
+            console.log('Purchase thank you page loaded');
+            console.log('Sale ID:', saleId);
+            console.log('Email:', email);
+        });
     </script>
 </body>
 </html>
